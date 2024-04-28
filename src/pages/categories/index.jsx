@@ -110,10 +110,6 @@ function Categories() {
                 }]} >
                 <Input />
               </Form.Item>
-              <Form.Item label="Is Recommended" name='isRecommended' rules={[{ type: 'boolean', required: true, message: 'maydon bosh' }]} >
-                <Switch />
-              </Form.Item>
-
               <Form.Item label="Slug" name='slug' >
                 <Input placeholder='smartphones..' disabled value={title} />
               </Form.Item>
