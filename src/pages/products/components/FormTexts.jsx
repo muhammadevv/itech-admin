@@ -50,7 +50,7 @@ function FormTexts({form}) {
         </Form.Item>
       </Col>
       <Col span={24}>
-        <Form.Item label='Description' name='desc' rules={[{ type: 'string', required: true, message: "Maydon bo'sh" }]}>
+        <Form.Item label='Description' name='desc' rules={[{ type: 'string'}]}>
           <Input.TextArea rows={4} placeholder='...' />
         </Form.Item>
       </Col>
