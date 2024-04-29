@@ -15,7 +15,7 @@ function FormPrices() {
         </Form.Item>
       </Col>
       <Col span={24}>
-        <Form.Item label="Discount" name='discount' rules={[{ type: 'number', required: true, message: 'maydon bosh' }]} >
+        <Form.Item label="Discount" name='discount' rules={[{ type: 'number', }]} >
           <InputNumber style={{ width: '100%' }} controls={false} />
         </Form.Item>
       </Col>
