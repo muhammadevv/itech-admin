@@ -27,12 +27,12 @@ function Dashboard() {
     {
       title: 'Product title',
       dataIndex: 'product',
-      render: (product) => <span>{product.title}</span>
+      render: (product) => <span>{product?.title}</span>
     },
     {
       title: 'Product prices',
       dataIndex: 'product',
-      render: (product) => <span>{product.price.toLocaleString()} UZS</span>
+      render: (products) => <span>{products?.price} UZS</span>
     },
     // {
     //   title: 'Actions',
@@ -77,7 +77,7 @@ function Dashboard() {
       id: 6,
       title: 'Total prices',
       loading: ordersLoading,
-      value: orders?.reduce((a, b) => a + b.product.price, 0)?.toLocaleString() + ' UZS'
+      value: orders?.reduce((a, b) => a + b?.product?.price, 0)?.toLocaleString() + ' UZS'
     },
     {
       id: 7,
@@ -101,8 +101,8 @@ function Dashboard() {
           </Col>
         ))}
       </Row>
-      <Card title="Latest orders" style={{marginTop: 24}}>
-        <Table pagination={false} dataSource={orders?.slice(0,8)} columns={columns} loading={ordersLoading} rowKey='id' ></Table>
+      <Card title="Latest orders" style={{ marginTop: 24 }}>
+        <Table pagination={false} dataSource={orders?.slice(0, 8)} columns={columns} loading={ordersLoading} rowKey='id' ></Table>
       </Card>
 
     </div>

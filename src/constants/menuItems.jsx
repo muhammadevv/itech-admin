@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HomeOutlined, ProductOutlined, MenuOutlined, AppstoreOutlined, BorderOutlined} from '@ant-design/icons';
+import { HomeOutlined, ProductOutlined, MenuOutlined, AppstoreOutlined, BorderOutlined } from '@ant-design/icons';
 export const menuItems = [
   {
     key: '/',

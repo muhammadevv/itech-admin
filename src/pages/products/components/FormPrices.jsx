@@ -21,7 +21,7 @@ function FormPrices() {
       </Col>
       <Col span={24}>
         <Form.Item label="Is Offer" name='isOffer' rules={[{ type: 'boolean', message: 'maydon bosh' }]} >
-          <Switch checkedChildren="Bor" unCheckedChildren="Yoq"/>
+          <Switch checkedChildren="Bor" unCheckedChildren="Yoq" />
         </Form.Item>
       </Col>
 

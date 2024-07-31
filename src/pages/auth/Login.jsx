@@ -13,6 +13,7 @@ function Login() {
 
   const [loading, setLoading] = useState(false)
 
+
   const onFinish = (values) => {
     setLoading(true)
     axios.post('https://ed3634daa39a78b5.mokky.dev/auth', values).then((res) => {
@@ -20,12 +21,23 @@ function Login() {
         addToken(res.data.token)
         navigate("/")
       }
-    }).catch(err => console.log(err, '💩💩💩')).finally(() => setLoading(false))
+    }).catch(
+      function (err) {
+        if (err.code === "ERR_NETWORK") {
+          alert("ERR NETWORK")
+        }
+        else if (err.response.status === 401) {
+          alert('Login')
+        }
+        else {
+          console.log(err, "💥💥💥")
+        }
+      }
+    ).finally(() => setLoading(false))
   }
 
   return (
     <div className='login-page'>
-
       <Card title='Login' style={{ width: 300 }}>
         <Form
           name="normal_login"

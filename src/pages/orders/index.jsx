@@ -18,7 +18,7 @@ function OrdersPage() {
     },
     {
       title: 'User name',
-      dataIndex: 'fullname',
+      dataIndex: 'username',
     },
     {
       title: 'User address',
@@ -27,12 +27,11 @@ function OrdersPage() {
     {
       title: 'Product title',
       dataIndex: 'product',
-      render: (product) => <span>{product.title}</span>
+      render: (product) => <span>{product?.title}</span>
     },
     {
       title: 'Actions',
-      render: (item) => (
-        <Button icon={<EyeOutlined />} onClick={() => handleView(item)} />
+      render: (item) => (<Button icon={<EyeOutlined />} onClick={() => handleView(item)} />
       )
     },
   ]

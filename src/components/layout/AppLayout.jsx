@@ -15,7 +15,7 @@ const AppLayout = () => {
         <div className="demo-logo-vertical" />
         <Menu
           theme="light"
-          mode="inline" 
+          mode="inline"
           defaultSelectedKeys={[locatin.pathname]}
           items={menuItems}
         />
